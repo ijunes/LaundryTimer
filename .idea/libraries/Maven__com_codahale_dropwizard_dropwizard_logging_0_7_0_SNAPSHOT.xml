@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.codahale.dropwizard:dropwizard-logging:0.7.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codahale/dropwizard/dropwizard-logging/0.7.0-SNAPSHOT/dropwizard-logging-0.7.0-20130918.221829-38.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codahale/dropwizard/dropwizard-logging/0.7.0-SNAPSHOT/dropwizard-logging-0.7.0-20130918.221829-38-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codahale/dropwizard/dropwizard-logging/0.7.0-SNAPSHOT/dropwizard-logging-0.7.0-20130918.221829-38-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
