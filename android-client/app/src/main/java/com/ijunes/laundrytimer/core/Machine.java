@@ -18,28 +18,28 @@ public class Machine implements Serializable {
     protected String avatarUrl;
 
 
-    public String getUsername() {
-        return username;
+    public String getMachineId() {
+        return machineId;
     }
 
-    public void setUsername(final String username) {
-        this.username = username;
+    public void setMachineId(final String machineId) {
+        this.machineId = machineId;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getLocationId() {
+        return locationId;
     }
 
-    public void setPhone(final String phone) {
-        this.phone = phone;
+    public void setLocationId(final String phone) {
+        this.locationId = phone;
     }
 
-    public String getObjectId() {
-        return objectId;
+    public String getStatus() {
+        return status;
     }
 
-    public void setObjectId(final String objectId) {
-        this.objectId = objectId;
+    public void setStatus(final String objectId) {
+        this.status = objectId;
     }
 
     public String getSessionToken() {
