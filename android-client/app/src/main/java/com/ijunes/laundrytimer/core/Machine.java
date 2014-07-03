@@ -12,8 +12,8 @@ public class Machine implements Serializable {
     protected String locationId;
     protected String status;
     protected String type;
-    protected String objectId;
-    protected String sessionToken;
+    protected String[] machineOptions;
+    protected String machineToken;
     protected String gravatarId;
     protected String avatarUrl;
 
