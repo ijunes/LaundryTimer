@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.11.+'
+        classpath 'com.android.tools.build:gradle:0.12.+'
     }
 }
 apply plugin: 'android'
@@ -29,6 +29,7 @@ dependencies {
     compile 'com.squareup:otto:1.3.4'
     compile 'com.squareup.picasso:picasso:1.1.1'
     compile 'com.squareup.retrofit:retrofit:1.5.1'
+    //compile files('libs/Parse-1.5.1.jar')
 
 
 
@@ -42,16 +43,36 @@ android {
     buildToolsVersion '19.1.0'
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 19
-        versionCode 102
-        versionName '1.0'
+        versionCode 1
+        versionName "1.0"
+        testPackageName "com.ijunes.laundrytimer.test"
+        testInstrumentationRunner "com.ijunes.laundrytimer.test.util.Runner"
     }
-
+    sourceSets {
+        debug {
+            resources.srcDirs = [devRootSrc + resourcesPath]
+            res.srcDirs = [devRootSrc + resPath]
+            assets.srcDirs = [devRootSrc + assetsPath]
+        }
+        release {
+            resources.srcDirs = [releaseRootSrc + resourcesPath]
+            res.srcDirs = [releaseRootSrc + resPath]
+            assets.srcDirs = [devRootSrc + assetsPath]
+        }
+    }
     packagingOptions {
         // Exclude file to avoid
         // Error: Duplicate files during packaging of APK
         exclude 'META-INF/services/javax.annotation.processing.Processor'
+
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+
     }
 
     // signingConfigs {
