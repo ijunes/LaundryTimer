@@ -43,16 +43,36 @@ android {
     buildToolsVersion '19.1.0'
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 19
-        versionCode 100
-        versionName '1.0'
+        versionCode 1
+        versionName "1.0"
+        testPackageName "com.ijunes.laundrytimer.test"
+        testInstrumentationRunner "com.ijunes.laundrytimer.test.util.Runner"
     }
-
+    sourceSets {
+        debug {
+            resources.srcDirs = [devRootSrc + resourcesPath]
+            res.srcDirs = [devRootSrc + resPath]
+            assets.srcDirs = [devRootSrc + assetsPath]
+        }
+        release {
+            resources.srcDirs = [releaseRootSrc + resourcesPath]
+            res.srcDirs = [releaseRootSrc + resPath]
+            assets.srcDirs = [devRootSrc + assetsPath]
+        }
+    }
     packagingOptions {
         // Exclude file to avoid
         // Error: Duplicate files during packaging of APK
         exclude 'META-INF/services/javax.annotation.processing.Processor'
+
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+
     }
 
     // signingConfigs {
